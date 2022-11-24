@@ -15,6 +15,7 @@
     </style>
 </head>
 <body>
+    <a href="./add-new-product.php"><button>Add New Product</button></a>
     <table>
         <thead>
             <tr>
@@ -30,7 +31,7 @@
         <tbody>
             <?php
                 require_once "../../models/connect.php"; //import file connect.php từ thư mục models vào
-                $query = "SELECT * FROM categories"; //tạo câu lệnh truy vấn db
+                $query = "SELECT * FROM products"; //tạo câu lệnh truy vấn db
                 $productList = getAll($query);
                 /*
                     gọi hàm getAll() từ file connect.php và truyền vào tham số là câu lệnh sql ở trên
@@ -44,7 +45,14 @@
                     <td><?php echo $product["productDesc"]?></td>
                     <td><img src="<?php echo $product["productImage"]?>" alt=""></td>
                     <td><?php echo $product["productPrice"]?></td>
-                    <td><?php echo $product["categoryId"]?></td>
+                    <td>
+                        <?php
+                            $cateId = $product["categoryId"];
+                            $query ="SELECT * FROM categories WHERE id=$cateId";
+                            $category = getOne($query);
+                            echo $category["categoryName"];
+                        ?>
+                    </td>
                     <td>
                         <button>Update</button>
                         <button>Delete</button>
