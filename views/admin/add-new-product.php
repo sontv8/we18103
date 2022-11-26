@@ -9,10 +9,10 @@
 </head>
 
 <body>
-    <form action="../../controllers/addNewProductController.php" method="POST">
+    <form action="../../controllers/addNewProductController.php" method="POST" enctype="multipart/form-data">
         <input type="text" name="product-name" placeholder="Product Name">
         <textarea name="product-desc" id="" cols="30" rows="10" placeholder="Product Desc"></textarea>
-        <input type="text" name="product-image">
+        <input type="file" name="product-image">
         <input type="text" name="product-price" placeholder="Product Price">
         <select name="category" id="">
             <?php
