@@ -43,7 +43,7 @@
                     <td><?php echo $product["id"]?></td>
                     <td><?php echo $product["productName"]?></td>
                     <td><?php echo $product["productDesc"]?></td>
-                    <td><img src="<?php echo $product["productImage"]?>" alt=""></td>
+                    <td><img src="<?php echo "../../image/".$product["productImage"]?>" alt=""></td>
                     <td><?php echo $product["productPrice"]?></td>
                     <td>
                         <?php
