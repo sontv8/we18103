@@ -20,7 +20,6 @@
 
     <div class="container w-[1280px] m-auto grid grid-cols-3 gap-8">
         <?php foreach($productList as $product):?>
-            
             <div>
                 <img src="<?php echo $product["productImage"]?>" alt="" class="w-full">
                 <h3><?php echo $product["productName"]?></h3>

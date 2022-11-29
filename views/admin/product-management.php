@@ -54,7 +54,7 @@
                         ?>
                     </td>
                     <td>
-                        <button>Update</button>
+                        <a href="update-product.php?id=<?php echo $product['id']?>"><button>Update</button></a>
                         <button>Delete</button>
                     </td>
                 </tr>
