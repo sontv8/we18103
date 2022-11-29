@@ -19,6 +19,7 @@
         // var_dump($product);die;
     ?>
     <form action="../../controllers/updateProductController.php" method="POST" enctype="multipart/form-data" class="w-[500px] m-auto">
+        <input type="text" name="product-id" value="<?php echo $productId?>">
         <input type="text" name="product-name" placeholder="Product Name" class="w-full border mt-8" value="<?php echo $product["productName"]?>">
         <textarea name="product-desc" id="" cols="30" rows="10" placeholder="Product Desc" class="w-full border mt-8"><?php echo $product["productDesc"]?></textarea>
         <input type="file" name="new-image" class="w-full border mt-8">
