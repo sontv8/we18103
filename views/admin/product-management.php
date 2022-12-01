@@ -55,7 +55,7 @@
                     </td>
                     <td>
                         <a href="update-product.php?id=<?php echo $product['id']?>"><button>Update</button></a>
-                        <button>Delete</button>
+                        <a href="../../controllers/deleteProductController.php?id=<?php echo $product['id']?>"><button>Delete</button></a>
                     </td>
                 </tr>
             <?php endforeach?>
